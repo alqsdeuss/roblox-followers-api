@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: "Noto Sans Mono";
+            font-style: normal;
+            font-display: swap;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/notosansmono/v30/BngrUXNETWXI6LwhGYvaxZikqZqK6fBq6kPvUce2oAZcdthSBUsYck4-_FNI49rXVEQQL8Y.woff2) format("woff2");
+        }
+
+        :root {
+            --primary: #000000;
+            --secondary: #e1e1e1;
+            --white: #ffffff;
+            --gray: #818181;
+            --blue: #2a7ce1;
+            --button: #191919;
+            --button-hover: #242424;
+            --button-press: #2a2a2a;
+            --button-stroke: rgba(255, 255, 255, 0.05);
+            --button-text: #e1e1e1;
+            --border-radius: 11px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans Mono", monospace;
+        }
+
+        body {
+            background: var(--primary);
+            color: var(--secondary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .wrap {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .num {
+            font-size: clamp(80px, 15vw, 140px);
+            font-weight: 500;
+            letter-spacing: -4px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadein 0.6s ease forwards;
+        }
+
+        .icon {
+            font-size: clamp(40px, 8vw, 60px);
+            color: var(--gray);
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fadein 0.6s ease 0.2s forwards;
+        }
+
+        h1 {
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+            opacity: 0;
+            animation: fadein 0.6s ease 0.4s forwards;
+        }
+
+        .msg {
+            font-size: clamp(14px, 3vw, 16px);
+            color: var(--gray);
+            margin-bottom: 32px;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadein 0.6s ease 0.6s forwards;
+        }
+
+        .btns {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            opacity: 0;
+            animation: fadein 0.6s ease 0.8s forwards;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            gap: 8px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 14.5px;
+            cursor: pointer;
+            background-color: var(--button);
+            color: var(--button-text);
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            box-shadow: 0 0 0 1px var(--button-stroke) inset;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background-color: var(--button-hover);
+        }
+
+        .btn:active {
+            background-color: var(--button-press);
+        }
+
+        .btn.pri {
+            background-color: var(--blue);
+            color: var(--white);
+        }
+
+        .btn.pri:hover {
+            background-color: #2470cc;
+        }
+
+        @keyframes fadein {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .btns {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="num">404</div>
+        <div class="icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h1>page not found</h1>
+        <p class="msg">doesnt exist this page lol</p>
+        
+        <div class="btns">
+            <a href="/" class="btn pri">
+                <i class="fa-solid fa-house"></i>
+                go back >_<
+            </a>
+        </div>
+    </div>
+</body>
+</html>
