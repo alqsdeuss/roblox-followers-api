@@ -1,0 +1,16 @@
+{
+  "name": "rblx-api",
+  "version": "1.0.0",
+  "description": "rasapi",
+  "main": "api/flws.js",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "type": "module"
+}
